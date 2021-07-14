@@ -4,11 +4,11 @@ if [[ -z $getUser ]]; then
 echo "User not exist"
 else
 	if ! [ -d $2 ];then
-		echo "No directory"
+		echo "the directory does not exist"
 	else
 		if [ $UID -eq 0 ]; then
 		chown -R  $1:$1 $2
-		else echo "You're not root"
+		else echo "You not root"
 		fi
 	fi 
 fi
